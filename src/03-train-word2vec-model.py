@@ -25,7 +25,8 @@ docs = Documents(RANDOM_WALKS_FILE)
 model = gensim.models.Word2Vec(
     docs,
     size=128,    # size of embedding vector
-    window=5,    # window size
+    window=10,   # window size
+    sg=1,        # skip-gram model
     min_count=2,
     workers=4
 )
